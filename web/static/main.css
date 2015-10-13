@@ -1,0 +1,164 @@
+﻿body {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+@media (min-width: 1500px){
+	.container {
+	  width: 1500px;
+	}
+}
+
+p {
+	max-width: 700px;
+	margin: auto;
+}
+
+h3 {
+	margin-top: 40px;
+}
+
+.top-level {
+	margin: 25px 0;
+}
+
+.header-top {
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.menu ul {
+	font-size: 9pt;
+	list-style: none;
+}
+
+.menu .category {
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.menu .items {
+  margin-top: -18px;
+  margin-left: 60px;
+}
+
+.menu .item {
+	font-weight: normal;
+}
+
+.menu .culinary-link {
+	font-size: 8pt;
+}
+
+#current-img {
+	max-width: 100%;
+	height: auto;
+}
+
+.thermometer path,
+.thermometer line {
+	shape-rendering: crispEdges;
+	stroke: #000;
+	stroke-width: 1px;
+	fill: none;
+  	fill-opacity: .7;
+}
+
+.thermometer text {
+  font-size: 7pt;
+  fill-opacity: .7;
+}
+
+.weather-footer {
+	margin-top: 60px;
+}
+
+#weather-attribution {
+	margin: 0;
+}
+
+.center {
+	border-left: solid rgba(211, 211, 211, 0.31) 1px;
+  	border-right: solid rgba(211, 211, 211, 0.31) 1px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.info {
+	font-size: .9rem;
+	color: gray;
+}
+
+.text {
+	text-align: left;
+	margin-top: 20px;
+}
+
+img {
+	margin-bottom: 10px;
+	margin-top: 20px;
+}
+
+.graph {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+	margin-bottom: 60px;
+}
+
+.hr {
+	height: 1px;
+	background-color: rgba(128, 128, 128, 0.25);
+	max-width: 70%;
+	margin: 70px auto 70px auto;
+}
+
+.mg-markers text {
+	font-size: 1.1rem;
+}
+
+.mg-active-datapoint {
+	font-size: 1.2rem;
+}
+
+.mg-x-axis text {
+	font-size: 1.1rem;
+}
+
+.mg-y-axis text {
+	font-size: 1.1rem;
+}
+
+.mg-markers line {
+	stroke-width: 1;
+}
+
+.mg-area1-color {
+	fill:  url(#gradient);
+}
+
+.mg-line1-color{
+	stroke: black;
+}
+
+.mg-line1-legend-color {
+	color: black;
+	margin: 10px;
+}
+
+.mg-line2-color {
+	stroke: rgb(120, 120, 120);
+	stroke-dasharray: 5,2;
+}
+
+.mg-line2-legend-color{
+	color: rgb(120, 120, 120);
+	margin: 10px;
+}
+
+.mg-area2-color {
+	fill: rgb(120, 120, 120);
+}

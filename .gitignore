@@ -1,0 +1,8 @@
+*.pyc
+*.pyproj
+*.sublime-workspace
+net.data
+config_weather.py
+data
+database.db
+img-1438194437.68.jpg

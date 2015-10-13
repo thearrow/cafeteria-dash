@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cassiopeia</title>
+	<link type="text/css" rel='stylesheet' href="../static/external/bootstrap.min.css" />
+	<link type="text/css" rel='stylesheet' href="../static/external/metricsgraphics.css" />
+	<link type="text/css" rel='stylesheet' href="../static/main.css" />
+</head>
+<body>
+<div class="container">
+	<p class="info">(Best Viewed in <a href="http://www.google.com/chrome/">Chrome)</a></p>
+	<h1>Cassiopeia</h1>
+	<div class="row top-level">
+		<div class="left col-md-4">
+			<h3 class="header-top">Menu</h3>
+			<div class="menu"></div>
+		</div>
+
+		<div class="center col-md-4">
+			<h3 class="header-top">Crowding</h3>
+			<p id="current-num" class="bold"></p>
+			<img id="current-img" src="" height="266" width="400"/>
+		</div>
+
+		<div class="right col-md-4">
+			<h3 class="header-top">Weather</h3>
+			<div class="col-md-12">
+				<div class="col-md-4">
+					<p id="weather-description" class="bold"></p>
+					<img id="weather-icon" src="" height="50" width="50"/>
+				</div>
+				<div class="col-md-4">
+					<p id="weather-temperature" class="bold"></p>
+					<div id="weather-thermometer"></div>
+				</div>
+				<div class="col-md-4">
+					<p id="weather-wind-speed"></p>
+					<p id="weather-wind-gust"></p>
+					<p id="weather-uv"></p>
+					<p id="weather-humidity"></p>
+				</div>
+			</div>
+			<div class="col-md-12 weather-footer">
+				<p id="weather-updated" class="info"></p>
+				<a id="weather-link" target="_blank" href="http://www.wunderground.com/">
+					<img id="weather-attribution" src="" height="65.8" width="107"/>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+	<h3>Today's Crowding</h3>
+	<div id="today-legend"></div>
+	<div id="today" class="graph"></div>
+	</div>
+
+	<div class="row">
+	<h3>Yesterday's Crowding</h3>
+	<div id="yesterday-legend"></div>
+	<div id="yesterday" class="graph"></div>
+	</div>
+
+	<div class="hr"></div>
+	<h1>What am I looking at?</h1>
+	<p class="text">
+		Graphs of arbitrary "crowded-ness" (scale of 1-10) over time at Cassiopeia for today and yesterday.<br />
+	</p>
+	<div class="hr"></div>
+	<h1>How does this work?</h1>
+	<p class="text">
+		Every minute from 10:30am to 2:00pm, a python script connects to the Cassiopeia webcam on Guru
+		and downloads an image. The image is preprocessed (resized and converted to grayscale)
+		and fed to an <a href="http://en.wikipedia.org/wiki/Artificial_neural_network">artificial neural network</a>
+		that was trained on some manually-labeled data. The neural network returns its best guess at how
+		crowded the image looks, and this result is saved to a database. This webpage queries the database
+		and generates these lovely graphs.
+	</p>
+
+	<p class="text">
+		The data is definitely not perfect, the output from the neural network is somewhat noisy and prone to
+		unrelated changes like light levels. Still should be enough to get the gist of the trends, though.
+	</p>
+
+	<p class="text">
+		Future ideas: Live updating today's graph, make graphs display properly in all browsers.
+	</p>
+
+	<img src="../static/ann.png" height="300"/>
+	<script type="text/javascript" src="../static/external/d3.min.js"></script>
+	<script type="text/javascript" src="../static/external/metricsgraphics.min.js"></script>
+	<script type="text/javascript" src="../static/main.js"></script>
+</div>
+</body>
+</html>
