@@ -1,8 +1,6 @@
-# About
-A fun little project to create a one-stop dashboard for a cafeteria, including crowd levels (current and historical averages), current weather, and today's menu.
+# Cafeteria Dashboard
+A fun little project to create a one-stop dashboard for a cafeteria, including crowd levels (current and historical averages - derived from webcam images by using a neural network), current weather, and today's menu.
 
-
-# Screenshot
 ![Example Screenshot](http://i.imgur.com/epOgRn4.png "Example Screenshot")
 
 
